@@ -8,11 +8,11 @@
 }
 
 :root {
-    --bg1: #171010;
-    --bg2: #1F1716;
-    --bg3: #0A0706;
-    --bg4: #756161;
-    --tx1: #D1D1C3;
+    --bg1: #ffdade;
+    --bg2: #cbd5e4;
+    --bg3: #bfc6d5;
+    --bg4: #38424c;
+    --tx1: #b57176;
 }
 
 * {
@@ -50,7 +50,7 @@ h1 {
 #back {
     padding: 10px 16px;
     background: var(--tx1);
-    border:1px solid #0a0605;
+    border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: .2s;
