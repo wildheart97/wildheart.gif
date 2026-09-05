@@ -34,7 +34,7 @@ function showFolders(folders){
         const button = card.querySelector(".copy-folder");
         button.onclick = (e) => {
             e.stopPropagation();
-            const customUrl = `https://creatreasurebox.github.io/rpg-assets/gallery/#${encodeURI(folder.path)}`;
+            const customUrl = `https://wildheart97.github.io/wildheart.gif/gallery/#${encodeURI(folder.path)}`;
             navigator.clipboard.writeText(customUrl);
             button.textContent = "✓";
             setTimeout(() => {
