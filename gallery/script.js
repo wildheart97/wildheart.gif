@@ -22,14 +22,25 @@ async function getFolder(path){
 } 
 
 function showFolders(folders){
-
     folders.forEach(folder=>{
         const card=document.createElement("div");
         card.className="folder";
         card.innerHTML=`
 		<img class="folder-icon" src="./png/folder.png" alt="folder">
 		<div class="name">${folder.name}</div>
+        <button class="copy-folder" title="Copier l'URL du dossier">⧉</button>
 	`;
+
+        const button = card.querySelector(".copy-folder");
+        button.onclick = (e) => {
+            e.stopPropagation();
+            const customUrl = `https://creatreasurebox.github.io/rpg-assets/gallery/#${encodeURI(folder.path)}`;
+            navigator.clipboard.writeText(customUrl);
+            button.textContent = "✓";
+            setTimeout(() => {
+                button.textContent = "⧉";
+            }, 1000);
+        };
 
         card.onclick=()=>{
             history.push(currentPath);
